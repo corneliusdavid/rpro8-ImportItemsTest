@@ -32,6 +32,7 @@ type
     function  RandTaxCode: string;
     function  RandBool: Boolean;
     function  RandDate: TDate;
+    function  RandPrice: Currency;
     function  RandStr(const Len: Integer): string;
     procedure ConnectToRPro;
     procedure DisconnectFromRPro;
@@ -149,6 +150,11 @@ begin
   Result := EncodeDate(Year, Month, Day);
 end;
 
+function TfrmMain.RandPrice: Currency;
+begin
+  Result := Random * 1000.0;
+end;
+
 function TfrmMain.RandStr(const Len: Integer): string;
 var
   i: Integer;
@@ -203,6 +209,7 @@ begin
   FRProItems.DCS               := 'TEST';
   FRProItems.ClassCode         := RandStr(3);
   FRProItems.DeptCode          := RandStr(3);
+  FRProItems.DeptName          := RandStr(10);
   FRProItems.SubClassCode      := RandStr(3);
   FRProItems.VendCode          := 'CORN';
   FRProItems.Description1      := 'Description1';
@@ -229,7 +236,22 @@ begin
 //  FRProItems.FirstReceivedDate := RandDate;
   FRProItems.LastMarkDownDate  := RandDate;
   FRProItems.DiscontinueDate   := RandDate;
-//  FRProItems.
+  FRProItems.Price[0]          := RandPrice;
+  FRProItems.Price[1]          := RandPrice;
+  FRProItems.PriceWithTax[0]   := RandPrice;
+  FRProItems.PriceWithTax[1]   := RandPrice;
+  FRProItems.Cost              := RandPrice;
+  FRProItems.MarginAmt         := Random * 10.0;
+  FRProItems.MarginPct         := Random(50);
+  FRProItems.Coefficient       := Random * 100.0;
+  FRProItems.TaxPercent        := Random * 100.0;
+  FRProItems.TaxAmount         := Random * 100.0;
+  FRProItems.LastCost          := Random * 100.0;
+  FRProItems.FormerPrice       := RandPrice;
+  FRProItems.UnitsPerCase      := Random(20);
+  FRProItems.PrintTags         := RandBool;
+  FRProItems.MarkUpPercent     := Random * 100.0;
+  FRProItems.CompanyQtyOnHand  := Random
 end;
 
 end.
