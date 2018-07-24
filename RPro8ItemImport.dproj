@@ -57,6 +57,10 @@
 			<DCC_RemoteDebug>true</DCC_RemoteDebug>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_UNIT_PLATFORM>false</DCC_UNIT_PLATFORM>
+			<VerInfo_Locale>1033</VerInfo_Locale>
 			<DCC_RemoteDebug>false</DCC_RemoteDebug>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -72,6 +76,15 @@
 			<DCCReference Include="ufrmMain.pas">
 				<Form>Form1</Form>
 				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="ufraRetailPro.pas">
+				<Form>fraRetailPro</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="uProjectConstants.pas"/>
+			<DCCReference Include="udmSettings.pas">
+				<Form>dmSettings</Form>
+				<DesignClass>TDataModule</DesignClass>
 			</DCCReference>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>

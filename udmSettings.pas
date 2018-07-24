@@ -25,8 +25,6 @@ type
     FConfigMgr: TRDIConfigManager;
     FLogSettings: TLogSettings;
     FSpringLogger: TRDISpringLogger;
-    FRProSettings: TRpro8Settings;
-    FRProDB: TRDiRProDB;
 
     procedure RegisterSections;
     procedure ConfigureSpringLogger;
@@ -96,7 +94,6 @@ begin
 
   FConfigMgr := GlobalContainer.Resolve<TRDIConfigManager>;
   FSpringLogger := GlobalContainer.Resolve<TRDISpringLogger>;
-  //FRProDB := GlobalContainer.Resolve<TRDiRProDB>;
 
   //Register the sections for this project
   RegisterSections;

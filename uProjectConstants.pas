@@ -11,7 +11,6 @@ const
 
   // Inventory import settings
   INIKey_ItemImportSettings = 'InventoryImportSettings';
-  INIKey_ItemImportFileSettings = 'InventoryImportFileSettings';
 
   // Customer import settings
   INIKey_CustomerImportSettings = 'CustomerImportSettings';
