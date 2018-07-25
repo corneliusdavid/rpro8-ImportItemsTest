@@ -47,4 +47,28 @@ object frmMain: TfrmMain
     ExplicitLeft = 8
     ExplicitTop = 8
   end
+  object cbContinuous: TCheckBox
+    Left = 136
+    Top = 286
+    Width = 97
+    Height = 17
+    Caption = 'Continuous'
+    TabOrder = 3
+  end
+  object btnStop: TButton
+    Left = 136
+    Top = 309
+    Width = 97
+    Height = 36
+    Caption = '&Stop'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    Visible = False
+    OnClick = btnStopClick
+  end
 end
